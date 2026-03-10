@@ -2,6 +2,14 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import path from "path";
+import express from "express";
+
+app.use(express.static(path.resolve("dist/public")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve("dist/public/index.html"));
+});
 
 const app = express();
 const httpServer = createServer(app);
