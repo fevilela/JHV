@@ -62,8 +62,10 @@ export function Contact() {
                   <Phone className="w-6 h-6 text-secondary-foreground" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-1">Telefone</h4>
-                  <p className="text-white/70">+55 (35) 9 9243 - 9287</p>
+                  <h4 className="font-semibold text-lg mb-1">WhatsApp</h4>
+                  <a href="https://wa.me/5535992439287" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
+                    +55 (35) 9 9243 - 9287
+                  </a>
                 </div>
               </div>
 
