@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { LayoutDashboard, FileCheck, Megaphone } from "lucide-react";
+import gestaoImage from "@assets/stock_images/gestao_agronegocio.jpg";
+import regularizacaoImage from "@assets/stock_images/regularizacao_rural.jpg";
+import agroMarketingImage from "@assets/stock_images/agro_marketing_produtos.jpg";
 
 export function Services() {
   const services = [
@@ -8,21 +11,21 @@ export function Services() {
       icon: LayoutDashboard,
       title: "Gestão",
       description: "A gestão agrícola envolve planejamento, organização e controle das atividades agrícolas. Os gestores precisam alocar recursos de forma eficiente e adotar tecnologias modernas para maximizar a produtividade.",
-      image: "https://images.unsplash.com/photo-1592982537447-6f296b01e6ca?q=80&w=800&auto=format&fit=crop" // agricultural tech / drone
+      image: gestaoImage
     },
     {
       id: "regularizacao",
       icon: FileCheck,
       title: "Regularização",
       description: "A regularização rural é fundamental para garantir a segurança jurídica dos proprietários, promover o desenvolvimento sustentável e facilitar o acesso a políticas públicas e crédito agrícola.",
-      image: "https://images.unsplash.com/photo-1505424297051-c3ad50b055ae?q=80&w=800&auto=format&fit=crop" // documents / handshake concept
+      image: regularizacaoImage
     },
     {
       id: "agromarketing",
       icon: Megaphone,
       title: "Agro Marketing",
       description: "Estratégias de marketing aplicadas ao setor agrícola para promover a visibilidade dos produtos, identificar necessidades do mercado, criar valor para clientes e impulsionar o crescimento.",
-      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop" // fresh produce / market
+      image: agroMarketingImage
     }
   ];
 
