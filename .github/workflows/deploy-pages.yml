@@ -10,26 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Pegar o código do repo
       - uses: actions/checkout@v4
 
-      # 2️⃣ Configurar Node.js (Node 24 recomendado)
       - uses: actions/setup-node@v4
         with:
           node-version: 24
 
-      # 3️⃣ Instalar dependências no client/
       - run: npm ci
-        working-directory: client
 
-      # 4️⃣ Rodar build para GitHub Pages
       - run: npm run build:pages
-        working-directory: client
 
-      # 5️⃣ Subir artefato para o GitHub Pages
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: client/dist/pages
+          path: dist/pages
 
-      # 6️⃣ Publicar no GitHub Pages
       - uses: actions/deploy-pages@v1
